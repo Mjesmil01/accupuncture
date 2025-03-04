@@ -1,0 +1,29 @@
+footer {
+  background-color: $clr-salmon;
+
+  padding: 5rem 0;
+
+  ul {
+    @include centerBetween;
+    color: $clr-light;
+    a {
+      color: $clr-light;
+      font-size: 2rem;
+    }
+    li {
+      padding: 0 5rem;
+      border-right: 2px solid $clr-light;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  .copyright {
+    margin-top: 4rem;
+    text-align: center;
+    color: $clr-light;
+    font-size: 1.8rem;
+  }
+}

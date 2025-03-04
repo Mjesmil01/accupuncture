@@ -1,3 +1,5 @@
+//Start of banner
+
 .banner {
   height: 80vh;
   padding-top: 10rem;
@@ -32,10 +34,11 @@
       margin-bottom: 2rem;
     }
     a {
-      border-radius: 5rem;
+      border-radius: 5rem !important;
       width: 100%;
-      font-size: 2rem;
+      font-size: 2rem !important;
       font-weight: bolder;
+      text-transform: uppercase;
     }
   }
 
@@ -83,8 +86,283 @@
 
       a {
         width: unset;
-        padding: 1.5rem 5rem;
+        padding: 1.5rem 3rem !important;
       }
     }
   }
 }
+// end of banner
+
+//start of proven
+
+.proven {
+  padding: 5rem 0;
+  text-align: center;
+  border-bottom: 20px solid $clr-salmon;
+
+  &__wrapper {
+    margin: 0 2 rem;
+  }
+
+  &__text {
+    h3 {
+      font-size: 4rem;
+    }
+
+    p {
+      margin-top: 2rem;
+    }
+  }
+
+  &__card {
+    margin-top: 8rem;
+
+    &__item {
+      margin-top: 8rem;
+
+      h3 {
+        color: $clr-salmon;
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+        margin: 2rem 3rem 0;
+        text-align: center;
+      }
+    }
+  }
+
+  @include mediaQuery($break-sm) {
+    &__card {
+      @include grid(3, 8rem);
+
+      &__item {
+        margin: 0;
+        p {
+          margin: 0 2rem;
+        }
+      }
+    }
+
+    &__text {
+      p {
+        margin: 2rem 6rem;
+      }
+    }
+  }
+}
+
+//end of proven
+
+//start of claim
+
+.claim {
+  background-color: $clr-dark;
+  padding: 5rem 0;
+
+  &__wrapper {
+    margin: 2rem 0;
+    text-align: center;
+    font-size: clamp(2rem, 6vw, 4rem);
+    color: $clr-light;
+    text-transform: capitalize;
+
+    a {
+      border-radius: 5rem !important;
+      font-size: 2rem !important;
+      font-weight: bolder;
+      text-transform: uppercase;
+    }
+  }
+
+  @include mediaQuery($break-sm) {
+    a {
+      width: unset;
+      padding: 1.5rem 3rem !important;
+    }
+  }
+}
+
+//end of claim
+
+//start robert
+.robert {
+  padding: 5rem 0;
+  border-bottom: 20px solid $clr-salmon;
+
+  &__item {
+    text-align: center;
+
+    &:last-child {
+      margin-top: 5rem;
+    }
+
+    &__text {
+      h3 {
+        font-size: 4rem;
+        margin: 1rem 0;
+      }
+
+      p {
+        text-align: left;
+        margin: 0 2rem;
+        line-height: 2;
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  @include mediaQuery($break-sm) {
+    &__item {
+      @include gridUneven(1fr 3fr, 5rem);
+      text-align: left;
+
+      &__text {
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+//end of robert
+
+//start of testimony
+.testimony {
+  padding: 5rem 0;
+  position: relative;
+  z-index: -999;
+
+  .tns-control {
+    display: block;
+    justify-content: space-between;
+
+    button {
+      position: absolute;
+      top: 50%;
+      z-index: 999;
+      background-color: $clr-salmon;
+      border-color: $clr-salmon;
+
+      &:first-child {
+        left: 2rem;
+      }
+      &:last-child {
+        left: 2rem;
+      }
+    }
+  }
+
+  .tns-nav {
+    text-align: center;
+  }
+
+  .tns-nav .tns-nav-active {
+    background-color: $clr-salmon;
+  }
+  .tns-nav button {
+    background-color: $clr-dark;
+    border-color: $clr-dark;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5rem;
+    margin: 5rem 2rem 0;
+  }
+
+  &__card__item {
+    text-align: center;
+    margin: 0;
+    padding: 0 5rem;
+
+    &__name {
+      margin-bottom: 3rem;
+
+      h3 {
+        padding-bottom: 3rem;
+      }
+
+      hr {
+        max-width: 25rem;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @include mediaQuery($break-sm) {
+    &__card__item {
+      &__text {
+        margin: 0 1rem;
+      }
+    }
+  }
+}
+
+//end of testimony
+
+//start of faq
+
+.faq {
+  padding: 5rem 0;
+  border-bottom: 20px solid $clr-salmon;
+  line-height: 2;
+  background-color: $clr-1-gray;
+
+  &__wrapper {
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__content {
+    h3 {
+      color: $clr-salmon;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    &__text {
+      p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+//end of faq
+
+//start of map
+.map {
+  background-color: $clr-dark;
+  padding: 5rem 0;
+
+  &__wrapper {
+    @include gridUneven(2fr 1.5fr, 5rem);
+  }
+
+  &__content {
+    color: $clr-light;
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    &__text {
+      p {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+      }
+      ul {
+        margin: 2rem 0;
+        font-size: 1.6rem;
+        line-height: 2;
+      }
+
+      hr {
+        max-width: 45rem;
+        border-color: $clr-salmon;
+      }
+    }
+  }
+}
+//end of map
